@@ -1,0 +1,32 @@
+name: Static Site CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install linters
+      run: |
+        npm install -g html-validator-cli stylelint eslint
+
+    - name: Run HTML validation
+      run: html-validator --file=index.html --verbose
+
+    - name: Run CSS validation
+      run: stylelint "**/*.css"
+
+    - name: Run JavaScript validation
+      run: eslint "**/*.js"
