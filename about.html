@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="top-footer-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="studies.html">Studies</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Get in Touch 📬</h1>
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <ul>
+        <li data-emoji="📧">Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li data-emoji="🌍">Website: <a href="https://yourwebsite.com" target="_blank" rel="noopener">yourwebsite.com</a></li>
+        <li data-emoji="📱">Phone/WhatsApp: <a href="tel:+1234567890">+12 345 678 90</a></li>
+        <li data-emoji="💬">Social Media:
+          <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener">Facebook</a> | 
+          <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener">Instagram</a> | 
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="message-section">
+      <h2>Send Me a Message ✉️</h2>
+      <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
