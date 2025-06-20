@@ -125,7 +125,8 @@ p {
 }
 
 /* Responsive for mobile */
-@media (max-width: 600px) {
+@media (width <= 600px) {
+
   body,
   .top-footer-menu {
     width: 100% !important;
