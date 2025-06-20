@@ -1,0 +1,230 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e6f0ff; /* light blue */
+  color: #1a1a1a;
+  margin: 0;
+  padding-top: 60px; /* space for fixed menu */
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 50, 150, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.container:hover {
+  box-shadow: 0 8px 25px rgba(0, 50, 150, 0.15);
+}
+
+/* Fixed top menu */
+.top-footer-menu {
+  background: linear-gradient(90deg, #4a90e2, #357abd);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 12px 0;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+/* Menu list */
+.top-footer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-footer-menu li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+.top-footer-menu a {
+  color: #f0f7ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+.top-footer-menu a:hover,
+.top-footer-menu a.active {
+  background-color: #2c5aa0;
+  color: #cce4ff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #2c5aa0aa;
+}
+
+/* Headings */
+h1 {
+  color: #234d9a;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+}
+
+/* Paragraphs and lists */
+p, ul {
+  font-size: 17px;
+  color: #2b2b2b;
+  padding-left: 0;
+  margin-bottom: 1.3em;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  position: relative;
+  font-weight: 500;
+}
+
+ul li::before {
+  content: "•";
+  color: #4a90e2;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .top-footer-menu li {
+    display: block;
+    margin: 12px 0;
+  }
+  .top-footer-menu a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  .container {
+    margin: 15px;
+    padding: 20px 15px;
+  }
+}
+
+/* Profile layout */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #333;
+  border-radius: 0;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+.profile-photo:hover {
+  box-shadow: 0 0 15px rgba(0, 80, 180, 0.5);
+}
+
+.profile p {
+  flex: 1 1 200px;
+  margin: 0;
+  font-weight: 600;
+  color: #1f1f1f;
+  font-size: 18px;
+}
+
+/* Contact page additions */
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-info h2,
+.message-section h2 {
+  color: #234d9a;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.02em;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 17px;
+  color: #2b2b2b;
+}
+
+.contact-info ul li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+.contact-info ul li::before {
+  content: attr(data-emoji);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.message-section form label {
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.message-section input[type="text"],
+.message-section input[type="email"],
+.message-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.message-section input[type="text"]:focus,
+.message-section input[type="email"]:focus,
+.message-section textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+}
+
+.message-section button {
+  background-color: #357abd;
+  color: #f0f7ff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.message-section button:hover {
+  background-color: #2c5aa0;
+  transform: scale(1.05);
+}
