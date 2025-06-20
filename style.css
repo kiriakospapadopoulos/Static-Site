@@ -62,6 +62,31 @@ ul li::before {
   box-shadow: 0 8px 25px rgb(0 50 150 / 15%);
 }
 
+/* Footer */
+.site-footer {
+  background: linear-gradient(90deg, #4a90e2, #357abd);
+  color: #f0f7ff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 -2px 6px rgb(0 0 0 / 10%);
+  border-top: 1px solid #2c5aa0;
+  flex-shrink: 0;
+}
+
+.site-footer a {
+  color: #0d254c;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
 /* Fixed top menu */
 .top-footer-menu {
   background: linear-gradient(90deg, #4a90e2, #357abd);
@@ -255,34 +280,4 @@ p {
 .message-section button:hover {
   background-color: #2c5aa0;
   transform: scale(1.05);
-}
-
-/* Footer */
-.site-footer {
-  background: linear-gradient(90deg, #4a90e2, #357abd);
-  color: #f0f7ff;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 0 -2px 6px rgb(0 0 0 / 10%);
-  border-top: 1px solid #2c5aa0;
-  flex-shrink: 0;
-}
-
-.site-footer a {
-  color: #0d254c;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.site-footer a:hover {
-  color: #357abd;
-  text-decoration: underline;
-}
-
-.site-footer p {
-  margin: 6px 0;
-  line-height: 1.5;
 }
